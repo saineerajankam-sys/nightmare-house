@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#08090d">
+  <title>NIGHTMARE HOUSE</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <div class="logo">NIGHTMARE <span>HOUSE</span></div>
+      <div class="status">● SURVIVE THE NIGHT</div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <p class="eyebrow">DON'T LOOK BEHIND YOU</p>
+        <h1>THE NIGHT<br>IS <span>HUNGRY.</span></h1>
+        <p class="subtitle">
+          Enter the abandoned house. Find your friends.
+          Escape before it finds you.
+        </p>
+      </section>
+
+      <section class="panel">
+        <h2>YOUR SURVIVOR</h2>
+        <div class="survivor">
+          <div class="avatar">☠</div>
+          <div class="survivor-info">
+            <h3>THE SURVIVOR</h3>
+            <p>Ready to enter the darkness</p>
+          </div>
+          <span class="ready">READY</span>
+        </div>
+
+        <label for="roomCode">ROOM CODE</label>
+        <input
+          id="roomCode"
+          type="text"
+          placeholder="Enter code to join"
+          maxlength="8"
+          autocomplete="off"
+        >
+
+        <label for="playerCount">PLAYERS</label>
+        <select id="playerCount">
+          <option value="2">2 Players</option>
+          <option value="3">3 Players</option>
+          <option value="4" selected>4 Players</option>
+        </select>
+
+        <button id="createRoom" class="primary">
+          CREATE ROOM
+        </button>
+        <button id="joinRoom" class="secondary">
+          JOIN ROOM
+        </button>
+
+        <p id="message" class="message" role="status">
+          Gather your team. Trust nobody.
+        </p>
+
+        <div id="roomInfo" hidden>
+          <p>YOUR ROOM CODE</p>
+          <div class="room-code">
+            <strong id="generatedCode"></strong>
+            <button id="copyCode" type="button">COPY</button>
+          </div>
+          <p id="playersInfo"></p>
+          <button id="startGame" class="primary" type="button">
+            ENTER THE HOUSE
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>NIGHTMARE HOUSE</p>
+      <p>STAY TOGETHER. STAY ALIVE.</p>
+    </footer>
+  </div>
+
+  <script type="module" src="/game.js"></script>
+</body>
+</html>
