@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080808">
+  <title>NIGHTMARE HOUSE</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main id="app">
+    <section id="lobby" class="panel">
+      <h1>NIGHTMARE HOUSE</h1>
+      <p>Enter the house. Find your friends. Survive.</p>
+
+      <label for="playerName">Your name</label>
+      <input id="playerName" maxlength="16" placeholder="Enter your name" value="Survivor">
+
+      <label for="playerCount">Players in room</label>
+      <select id="playerCount">
+        <option value="2">2 players</option>
+        <option value="4">4 players</option>
+      </select>
+
+      <button id="createRoom">CREATE ROOM</button>
+
+      <div class="separator">OR JOIN YOUR FRIENDS</div>
+      <input id="roomCode" maxlength="5" placeholder="5-LETTER ROOM CODE">
+      <button id="joinRoom">JOIN ROOM</button>
+
+      <p id="message" role="status">The house is waiting...</p>
+    </section>
+
+    <section id="game" hidden>
+      <div id="hud">
+        <strong>NIGHTMARE HOUSE</strong>
+        <span>Room: <b id="currentRoom">-----</b></span>
+        <span id="playerStatus">Find a way out!</span>
+        <button id="leaveRoom">LEAVE</button>
+      </div>
+
+      <div id="gameCanvas"></div>
+
+      <div id="controls">
+        <div id="joystickArea">
+          <div id="joystick"><span></span></div>
+        </div>
+        <div id="lookHint">Drag the screen to look around</div>
+        <button id="respawn" hidden>TRY AGAIN</button>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="/game.js"></script>
+</body>
+</html>
+
